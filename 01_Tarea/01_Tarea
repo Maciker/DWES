@@ -1,9 +1,11 @@
 Detalles de la tarea de esta unidad.
 Enunciado.
+
 Con el objetivo de gestionar una lista de direcciones de correo, se va a programar una aplicación web. En una primera aproximación, esta aplicación se compondrá de tres páginas:
 •	Una página de presentación, donde explicas el cometido de la aplicación y su funcionamiento. Contiene un enlace que te lleva a la siguiente página.
 •	Una página de introducción de datos, donde cualquiera puede darse de alta introduciendo su nombre y su dirección de correo. Contiene un formulario que, una vez rellenado, envía los datos y te lleva a la siguiente página.
 •	Una página de visualización de datos, en la que se muestra la lista, nombres y direcciones de correo, de todos los que se han anotado en la aplicación.
+
 Tienes que crear un documento en el que respondas a las siguientes preguntas sobre la aplicación que vas a desarrollar:
 1.	¿Utilizarás páginas estáticas o dinámicas para programar cada una de las páginas que componen tu aplicación? ¿Por qué?
 2.	Si en la página de introducción de datos quieres comprobar que el correo electrónico introducido cumple unas ciertas normas (por ejemplo, que tiene una @), ¿qué tecnología/lenguaje utilizarás? ¿será necesario recargar la página para explicarle al usuario que el formato del correo electrónico introducido no es correcto?
@@ -15,6 +17,7 @@ Tienes que crear un documento en el que respondas a las siguientes preguntas sob
 8.	¿Qué necesitas instalar en tu ordenador para poder desarrollar la aplicación?
 9.	Si utilizas el lenguaje PHP para programar la aplicación, ¿cuál será el tipo de datos se utilizará para manipular cada una de las direcciones de correo?
 10.	Para profundizar: hasta ahora, hemos visto que JavaScript es una tecnología para el desarrollo web en cliente y así ha sido tradicionalmente. En los últimos años han surgido soluciones que llevan JavaScript al lado servidor. Busca información sobre Node.JS, explica en qué consiste esta tecnología y cuáles son sus ventajas y desventajas respecto a las tecnologías tradicionales de desarrollo web en lado servidor vistas en el tema (Java EE, AMP, ASP.Net, etc.).
+
 Criterios de puntuación. Total 10 puntos.
 De los 10 apartados anteriores, se valorará con 1 punto la respuesta correcta a cada uno de ellos.
 Recursos necesarios para realizar la Tarea.
