@@ -1,0 +1,31 @@
+Detalles de la tarea de esta unidad.
+Enunciado.
+Con el objetivo de gestionar una lista de direcciones de correo, se va a programar una aplicación web. En una primera aproximación, esta aplicación se compondrá de tres páginas:
+•	Una página de presentación, donde explicas el cometido de la aplicación y su funcionamiento. Contiene un enlace que te lleva a la siguiente página.
+•	Una página de introducción de datos, donde cualquiera puede darse de alta introduciendo su nombre y su dirección de correo. Contiene un formulario que, una vez rellenado, envía los datos y te lleva a la siguiente página.
+•	Una página de visualización de datos, en la que se muestra la lista, nombres y direcciones de correo, de todos los que se han anotado en la aplicación.
+Tienes que crear un documento en el que respondas a las siguientes preguntas sobre la aplicación que vas a desarrollar:
+1.	¿Utilizarás páginas estáticas o dinámicas para programar cada una de las páginas que componen tu aplicación? ¿Por qué?
+2.	Si en la página de introducción de datos quieres comprobar que el correo electrónico introducido cumple unas ciertas normas (por ejemplo, que tiene una @), ¿qué tecnología/lenguaje utilizarás? ¿será necesario recargar la página para explicarle al usuario que el formato del correo electrónico introducido no es correcto?
+3.	Si en esa misma página, ahora quieres comprobar que el correo electrónico introducido no se haya introducido anteriormente y ya figure en la lista, ¿qué tecnologías o lenguajes utilizarás? Indica, al menos, dos opciones.
+4.	¿Qué tecnología podrías utilizar para almacenar las direcciones de correo de los distintos usuarios de forma permanente? Indica, al menos, tres ejemplos explicando si son o no open source.
+5.	¿Qué arquitecturas puedes usar en el servidor para ejecutar la aplicación? 
+6.	¿Qué parámetros debes tener en cuenta para decidirte por usar una arquitectura u otra?
+7.	Si te decides por utilizar una arquitectura AMP para la aplicación ¿qué componentes necesitas instalar en tu servidor para ejecutar la aplicación? Indica algún producto concreto para cada componente.
+8.	¿Qué necesitas instalar en tu ordenador para poder desarrollar la aplicación?
+9.	Si utilizas el lenguaje PHP para programar la aplicación, ¿cuál será el tipo de datos se utilizará para manipular cada una de las direcciones de correo?
+10.	Para profundizar: hasta ahora, hemos visto que JavaScript es una tecnología para el desarrollo web en cliente y así ha sido tradicionalmente. En los últimos años han surgido soluciones que llevan JavaScript al lado servidor. Busca información sobre Node.JS, explica en qué consiste esta tecnología y cuáles son sus ventajas y desventajas respecto a las tecnologías tradicionales de desarrollo web en lado servidor vistas en el tema (Java EE, AMP, ASP.Net, etc.).
+Criterios de puntuación. Total 10 puntos.
+De los 10 apartados anteriores, se valorará con 1 punto la respuesta correcta a cada uno de ellos.
+Recursos necesarios para realizar la Tarea.
+No se necesitan recursos específicos para esta tarea.
+Consejos y recomendaciones.
+Incluye la pregunta que se formula antes de cada una de las respuestas.
+No respondas de forma demasiado breve. Intenta razonar y explicar de forma clara las decisiones adoptadas.
+Si consideras que existen varias respuestas posibles, indícalo y explica cuál sería la mejor opción.
+Indicaciones de entrega.
+Una vez realizada la tarea elaborarás un único documento PDF donde figuren los enunciados y las respuestas correspondientes. El envío se realizará a través de la plataforma de la forma establecida para ello, y el archivo se nombrará siguiendo las siguientes pautas:
+apellido1_apellido2_nombre_SIGxx_Tarea
+Asegúrate que el nombre no contenga la letra ñ, tildes ni caracteres especiales extraños. Así por ejemplo la alumna Begoña Sánchez Mañas para la primera unidad del MP de DWES, debería nombrar esta tarea como...
+sanchez_manas_begona_DWES01_Tarea
+El formato del fichero a entregar será, obligatoriamente, PDF.
