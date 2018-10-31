@@ -5,15 +5,16 @@ Con el objetivo de gestionar una lista de direcciones de correo, se va a program
 esta aplicación se compondrá de tres páginas:
 •	Una página de presentación, donde explicas el cometido de la aplicación y su funcionamiento. Contiene un enlace que te lleva a la 
 siguiente página.
-•	Una página de introducción de datos, donde cualquiera puede darse de alta introduciendo su nombre y su dirección de correo. Contiene 
-un formulario que, una vez rellenado, envía los datos y te lleva a la siguiente página.
-•	Una página de visualización de datos, en la que se muestra la lista, nombres y direcciones de correo, de todos los que se han anotado 
-en la aplicación.
+•	Una página de introducción de datos, donde cualquiera puede darse de alta introduciendo su nombre y su dirección de correo. 
+Contiene un formulario que, una vez rellenado, envía los datos y te lleva a la siguiente página.
+•	Una página de visualización de datos, en la que se muestra la lista, nombres y direcciones de correo, de todos los que se 
+han anotado en la aplicación.
 
 Tienes que crear un documento en el que respondas a las siguientes preguntas sobre la aplicación que vas a desarrollar:
 1.	¿Utilizarás páginas estáticas o dinámicas para programar cada una de las páginas que componen tu aplicación? ¿Por qué?
 2.	Si en la página de introducción de datos quieres comprobar que el correo electrónico introducido cumple unas ciertas normas 
-(por ejemplo, que tiene una @), ¿qué tecnología/lenguaje utilizarás? ¿será necesario recargar la página para explicarle al usuario que el formato del correo electrónico introducido no es correcto?
+(por ejemplo, que tiene una @), ¿qué tecnología/lenguaje utilizarás? ¿será necesario recargar la página para explicarle al 
+usuario que el formato del correo electrónico introducido no es correcto?
 3.	Si en esa misma página, ahora quieres comprobar que el correo electrónico introducido no se haya introducido anteriormente y 
 ya figure en la lista, ¿qué tecnologías o lenguajes utilizarás? Indica, al menos, dos opciones.
 4.	¿Qué tecnología podrías utilizar para almacenar las direcciones de correo de los distintos usuarios de forma permanente? 
@@ -40,9 +41,8 @@ No respondas de forma demasiado breve. Intenta razonar y explicar de forma clara
 Si consideras que existen varias respuestas posibles, indícalo y explica cuál sería la mejor opción.
 Indicaciones de entrega.
 Una vez realizada la tarea elaborarás un único documento PDF donde figuren los enunciados y las respuestas correspondientes. 
-El envío se realizará a través de la plataforma de la forma establecida para ello, y el archivo se nombrará siguiendo las siguientes 
-pautas:
-apellido1_apellido2_nombre_SIGxx_Tarea
+El envío se realizará a través de la plataforma de la forma establecida para ello, y el archivo se nombrará siguiendo las 
+siguientes pautas:apellido1_apellido2_nombre_SIGxx_Tarea
 Asegúrate que el nombre no contenga la letra ñ, tildes ni caracteres especiales extraños. Así por ejemplo la alumna Begoña Sánchez 
 Mañas para la primera unidad del MP de DWES, debería nombrar esta tarea como...
 sanchez_manas_begona_DWES01_Tarea
