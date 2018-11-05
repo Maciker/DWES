@@ -1,0 +1,50 @@
+Detalles de la tarea de esta unidad.
+Enunciado.
+Se trata de programar una aplicación para mantener una agenda en una única página web programada en PHP.
+La agenda guardará únicamente dos datos de cada persona: su nombre y una dirección de correo electrónico. Además, no se 
+podrán repetir nombres en la agenda.
+Por simplicidad y para evitar añadir más validaciones, las mayúsculas, minúsculas y tildes son tenidas en cuenta. 
+Por ejemplo, JUAN y juan serán nombres distintos y podrán tener dos registros diferentes en la agenda.
+En la parte superior de la página web se mostrará el contenido de la agenda. En la parte inferior debe figurar un 
+sencillo formulario con dos cuadros de texto, uno para el nombre y otro para la dirección de correo electrónico.
+Cada vez que se envíe el formulario:
+•	CASO 1: Si el nombre está vacío, se mostrará una advertencia.
+•	CASO 2: Si el nombre que se introdujo NO existe en la agenda y la dirección de correo electrónico está informada 
+se añadirá el nuevo registro a la agenda.
+•	CASO 3: Si el nombre que se introdujo YA existe en la agenda y la dirección de correo electrónico está informada 
+se actualizará el valor de la agenda.
+•	CASO 4: Si el nombre que se introdujo YA existe en la agenda y no se indica dirección de correo electrónico, se 
+eliminará de la agenda la entrada correspondiente a ese nombre.
+NOTA ACLARATORIA: la información simplemente se muestra por pantalla, no se almacena en ninguna base de datos.
+Imagen de ejemplo de cómo debería quedar la aplicación:
+ 
+Criterios de puntuación. Total 10 puntos.
+Se valorará la consecución de cada uno de los siguientes items con la siguiente puntuación:
+•	Generar la estructura de la página PHP.  (0,5 pto)
+•	Mostrar los contactos existentes en la agenda. (1 pto)
+•	Generar el formulario de introducción de nuevo contacto. (1 pto)
+•	Introducir los datos de la agenda como campos ocultos en el formulario. (1 pto)
+•	Comprobar los datos enviados por el formulario, mostrando una advertencia cuando sea necesario (caso 1). (1 pto)
+•	Introducir en la agenda los datos de un nuevo contacto (caso 2). (1 pto)
+•	Modificar el correo electrónico de un contacto ya existente (caso 3). (1 pto)
+•	Eliminar de la agenda un contacto (caso 4). (1 pto)
+•	Utilizar un array asociativo. (1 pto)
+•	Introducir comentarios en el código. Este apartado es fundamental y demuestra que el alumno ha entendido cada uno 
+de los recursos utilizados en la práctica. (1,5 pto)
+Recursos necesarios para realizar la Tarea.
+Ordenador con PHP, servidor web Apache y entorno de desarrollo NetBeans, correctamente instalado y configurado según 
+lo visto en el tema anterior.
+Consejos y recomendaciones.
+Se recomienda emplear como apoyo un navegador con acceso a Internet, para poder consultar el manual online de PHP .
+Indicaciones de entrega.
+Una vez realizada la tarea, elaborarás un único documento PDF donde figure el plan de pruebas completo que refleje de 
+forma clara todos los casos de uso con capturas de pantalla y explicaciones. Recuerda que laúnica manera de demostrar 
+que has conseguido cada uno de los items del apartado de criterios es que aparezca reflejado en dicho plan.
+El PDF con el plan de pruebas, junto al archivo .php con el programa y sus comentarios, se añadirán a una carpeta 
+comprimida en .zip. Este archivo .zip será el único entregable de la práctica.
+El envío del .zip se realizará a través de la plataforma de la forma establecida para ello, y el archivo se nombrará 
+siguiendo las siguientes pautas:
+apellido1_apellido2_nombre_SIGxx_Tarea
+Asegúrate que el nombre no contenga la letra ñ, tildes ni caracteres especiales extraños. Así por ejemplo la alumna 
+Begoña Sánchez Mañas para la segunda unidad del MP de DWES, debería nombrar esta tarea como...
+sanchez_manas_begona_DWES02_Tarea
