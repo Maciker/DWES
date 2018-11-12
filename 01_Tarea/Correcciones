@@ -1,0 +1,6 @@
+2. La comprobación se suele hacer en el lado del servidor ya que modificar/dehabilitar Javascript desde el navegador es 
+algo muy sencillo de hacer. En este caso se recargaría la página, aunque si se hace por AJAX en lugar de recargarla toda 
+solo se haría con una sección de la misma
+
+7. Te faltaría la P de por ejemplo PHP, es decir l módulo que se integrará con el servidor web, responsable de ejecutar 
+el código escrito en el lenguaje de programación
