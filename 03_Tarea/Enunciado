@@ -1,0 +1,57 @@
+Detalles de la tarea de esta unidad.
+Enunciado.
+Partiendo de la base de datos 'dwes' usada en los ejemplos y ejercicios de la unidad, se trata de programar una 
+aplicación que permita gestionar los registros de la tabla 'productos'. La aplicación se dividirá en tres páginas web:
+•	query.php. Mostrara un cuadro desplegable que permita seleccionar un registro de la tabla 'familias', junto a un
+botón "Mostrar". Al pulsar el botón, se mostrará un listado de los productos de la familia seleccionada.
+Para cada producto se mostrará su nombre corto y su PVP, junto a un botón con el texto "Editar". Cuando se pulse 
+ese botón, se enviará el formulario a la página "edit.php". Captura de muestra:
+ 
+•	edit.php. Debe mostrar los datos del producto seleccionado en la página anterior (nombre corto, nombre, descripción y PVP) 
+dentro de un formulario que permita editarlos, y dos botones: "Actualizar" y "Cancelar". El formulario se enviará a la página "update.php".
+•	 
+      
+•	update.php. Esta página simplemente redirige a la página "query.php", pero si en el formulario anterior se ha
+pulsado "Actualizar" (y no "Cancelar"), antes de redirigir debe ejecutar una consulta para actualizar los datos
+del producto en la base de datos. Para redirigir se puede utilizar un formulario con un botón "Continuar" o la 
+etiqueta "<meta http-equiv='refresh' content='1'; url=…>" dentro del encabezado.
+      
+A tener en cuenta:
+•	Para acceder a la base de datos se debe usar PDO.
+•	También se deben utilizar excepciones para el control de errores.
+•	Los fuentes deberán llamarse obligatoriamente query.php, edit.php y update.php.
+•	Además, se recomienda utilizar como base esta plantilla y hoja de estiloque se muestran a continuación:
+Página y hoja de estilo. (0.01 MB)
+
+Criterios de puntuación. Total 10 puntos.
+Se valorará la consecución de cada uno de los ítems de la siguiente manera:
+•	En query.php, generar el listado de los productos de cada familia - 3 ptos.
+•	En edit.php, generar el formulario de edición del producto  - 2 ptos.
+•	En update.php, realizar la consulta de actualización de datos y la redirección a query.php - 2 ptos.
+Se valorará con un punto la consecución de cada uno de los siguientes ítems:
+•	Utilizar excepciones para el control de los posibles errores - 1 pto.
+•	Introducir comentarios y legibilidad del código - 1 pto.
+•	Calidad y presentación del plan de pruebas - 1 pto.
+Recursos necesarios para realizar la Tarea.
+Ordenador con PHP, servidor web Apache y entorno de desarrollo NetBeans, correctamente instalado y configurado. Navegador con acceso a Internet, para poder consultar el manual online de PHP:
+manual online de PHP
+
+Consejos y recomendaciones.
+Además del manual online de PHP, se recomienda acceso a Internet para la búsqueda de información.
+Indicaciones de entrega.
+Una vez realizada la tarea, elaborarás un único documento PDF donde figure el plan de pruebas completo que 
+refleje de forma clara todos los casos de uso con capturas de pantalla y explicaciones. Recuerda que la única
+manera de demostrar que has conseguido cada uno de los items del apartado de criterios es que aparezca reflejado
+en dicho plan. Las prácticas sin plan de pruebas serán calificadas directamente con cero.
+Por ejemplo, para el caso de actualización de un registro:
+- Deberá aparecer una imagen previa a la acción donde aparezca el registro a actualizar y los datos que introduces en el formulario.
+- A continuación, una segunda captura con el resultado final de la acción. Es decir, con el registro actualizado.
+El PDF con el plan de pruebas, junto los tres fuentes .php con el programa y sus comentarios, se añadirán a una
+carpeta comprimida en .zip. Este archivo .zip será el único entregable de la práctica. En el caso de que se 
+utilice una hoja de estilos diferente (no lo recomiendo), ésta deberá entregarse en el mismo .zip junto con el resto de fuentes.
+El envío del .zip se realizará a través de la plataforma de la forma establecida para ello, y el archivo se 
+nombrará siguiendo las siguientes pautas:
+apellido1_apellido2_nombre_SIGxx_Tarea
+Asegúrate que el nombre no contenga la letra ñ, tildes ni caracteres especiales extraños. Así por ejemplo la 
+alumna Begoña Sánchez Mañas para la tercera unidad del MP de DWES, debería nombrar esta tarea como...
+sanchez_manas_begona_DWES03_Tarea
