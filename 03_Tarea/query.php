@@ -98,7 +98,7 @@ Autor: Iker Macaya Faber -->
                 ?>               
 </div>
 <?php   //Cerramos conexion conla BD
-        $conn->close();?>  
+        $conn=null;?>  
 <div id="pie">
 </div>
 </body>
