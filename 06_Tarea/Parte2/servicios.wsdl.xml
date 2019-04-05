@@ -1,0 +1,120 @@
+<wsdl:definitions   xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                    xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/"
+                    xmlns:soap-env="http://schemas.xmlsoap.org/wsdl/soap/"
+                    xmlns:tns="http://localhost/DWES/06/Parte2"
+                    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                    targetNamespace="http://localhost/DWES/06/Parte2">
+    <wsdl:types>
+        <xsd:schema targetNamespace="http://localhost/DWES/06/Parte2"/>
+    </wsdl:types>
+    <wsdl:message name="ejecutaConsultaRequest">
+        <wsdl:part name="sql" type="xsd:string"/>
+    </wsdl:message>
+    <wsdl:message name="ejecutaConsultaResponse">
+        <wsdl:part name="ejecutaConsultaReturn" type="xsd:string"/>
+    </wsdl:message>
+    <wsdl:message name="getFechaNacimientoRequest">
+        <wsdl:part name="cod" type="xsd:int"/>
+    </wsdl:message>
+    <wsdl:message name="getFechaNacimientoResponse">
+        <wsdl:part name="getFechaNacimientoReturn" type="xsd:string"/>
+    </wsdl:message>
+    <wsdl:message name="getDepartamentosRequest"/>
+    <wsdl:message name="getDepartamentosResponse">
+        <wsdl:part name="getDepartamentosReturn" type="soap-enc:array"/>
+    </wsdl:message>
+    <wsdl:message name="getEmpleadosDepartamentoRequest">
+        <wsdl:part name="cod" type="xsd:string"/>
+    </wsdl:message>
+    <wsdl:message name="getEmpleadosDepartamentoResponse">
+        <wsdl:part name="getEmpleadosDepartamentoReturn" type="soap-enc:array"/>
+    </wsdl:message>
+    <wsdl:message name="getFechaDesdeEmpleadoDeptRequest">
+        <wsdl:part name="dpto" type="xsd:string"/>
+        <wsdl:part name="emp" type="xsd:int"/>
+    </wsdl:message>
+    <wsdl:message name="getFechaDesdeEmpleadoDeptResponse">
+        <wsdl:part name="getFechaDesdeEmpleadoDeptReturn" type="xsd:string"/>
+    </wsdl:message>
+    <wsdl:portType name="DatosEmpresa_wsdlPortType">
+        <wsdl:operation name="ejecutaConsulta">
+            <wsdl:documentation>Metodo para hacer la conexion a la BD y ejecutar las consultas</wsdl:documentation>
+            <wsdl:input message="tns:ejecutaConsultaRequest"/>
+            <wsdl:output message="tns:ejecutaConsultaResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getFechaNacimiento">
+            <wsdl:documentation>Metodo para obtener la fecha de nacimientos de un empleado</wsdl:documentation>
+            <wsdl:input message="tns:getFechaNacimientoRequest"/>
+            <wsdl:output message="tns:getFechaNacimientoResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getDepartamentos">
+            <wsdl:documentation>Metodo para obtener la lista de departamentos</wsdl:documentation>
+            <wsdl:input message="tns:getDepartamentosRequest"/>
+            <wsdl:output message="tns:getDepartamentosResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getEmpleadosDepartamento">
+            <wsdl:documentation>Metodo que recibe un codido de dpto. y muestra los empleados del mismo</wsdl:documentation>
+            <wsdl:input message="tns:getEmpleadosDepartamentoRequest"/>
+            <wsdl:output message="tns:getEmpleadosDepartamentoResponse"/>
+        </wsdl:operation>
+        <wsdl:operation name="getFechaDesdeEmpleadoDept">
+            <wsdl:documentation>Metodo que a partir de un codigo de empleado y departamento devuelve la fecha de entrada del mismo.</wsdl:documentation>
+            <wsdl:input message="tns:getFechaDesdeEmpleadoDeptRequest"/>
+            <wsdl:output message="tns:getFechaDesdeEmpleadoDeptResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="DatosEmpresa_wsdlBinding" type="tns:DatosEmpresa_wsdlPortType">
+        <soap-env:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="ejecutaConsulta">
+            <soap-env:operation soapAction="http://localhost/DWES/06/Parte2/resource_wsdl.php?method=ejecutaConsulta" style="rpc"/>
+            <wsdl:input>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getFechaNacimiento">
+            <soap-env:operation soapAction="http://localhost/DWES/06/Parte2/resource_wsdl.php?method=getFechaNacimiento" style="rpc"/>
+            <wsdl:input>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getDepartamentos">
+            <soap-env:operation soapAction="http://localhost/DWES/06/Parte2/resource_wsdl.php?method=getDepartamentos" style="rpc"/>
+            <wsdl:input>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getEmpleadosDepartamento">
+            <soap-env:operation soapAction="http://localhost/DWES/06/Parte2/resource_wsdl.php?method=getEmpleadosDepartamento" style="rpc"/>
+            <wsdl:input>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getFechaDesdeEmpleadoDept">
+            <soap-env:operation soapAction="http://localhost/DWES/06/Parte2/resource_wsdl.php?method=getFechaDesdeEmpleadoDept" style="rpc"/>
+            <wsdl:input>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap-env:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="DatosEmpresa_wsdl">
+        <wsdl:documentation/>
+        <wsdl:port name="DatosEmpresa_wsdlPort" binding="tns:DatosEmpresa_wsdlBinding">
+            <soap-env:address location="http://localhost/DWES/06/Parte2/resource_wsdl.php"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
