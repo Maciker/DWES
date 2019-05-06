@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JSON con AJAX y PHP</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#formdatos").submit(function(event) {
+		// Detenemos el envío del formulario				
+		event.preventDefault();
+
+		// Recoger datos del formulario
+		var nombre = $("#nombre").val(),
+		apellido = $("#apellido").val(),		
+		email = $("#email").val(),
+		anio_nac = $("#anio_nac").val(),
+
+		// Inicializar un registro con los datos de formulario para enviar por AJAX
+		datos = {"nombre":nombre, "apellido":apellido, "email":email,"anio_nac":anio_nac};
+		
+		// Lanzar petición AJAX
+		$.ajax({
+			url: "check.php",
+			type: "POST",
+			dataType: 'json',
+			data: datos
+		}).done(function(respuesta){
+			// Si no hay error
+			if (respuesta.estado) {
+				var nombre = respuesta.nombre,
+				apellido = respuesta.apellido,
+				edad = respuesta.edad;
+				$("#respuesta").html("Respuesta correcta:<pre>"+JSON.stringify(respuesta, null, 2)+"</pre>");
+			}
+			else {
+				var span = '<span style="color:red">';				
+				$.each( respuesta.error, function( key,value ) {					
+					span+='<br />'+value;
+  				})
+  				span+='</span>';
+				$("#respuesta").html(span);
+			}
+		});
+	});
+});
+</script>
+</head>
+
+<body>
+<h1>Datos para enviar a PHP</h1>
+<form id="formdatos" method="POST" action="datos.php">
+<input type="text" id="nombre" name="nombre" placeholder="Nombre" /><br /><br />
+<input type="text" id="apellido" name="apellido" placeholder="Apellido" /><br /><br />
+<input type="text" id="email" name="email" placeholder="E-mail" /><br /><br />
+<input type="text" id="anio_nac" name="anio_nac" placeholder="Año de nacimiento" /><br /><br />
+<input type="submit"  value="Enviar"><br /><br />
+</form>
+
+<hr />
+<div id="respuesta"></div>
+
+</body>
+</html>
