@@ -1,0 +1,6 @@
+{
+    "require": {
+        "cmfcmf/openweathermap-php-api": "^2.4",
+        "jaxon-php/jaxon-core": "~2.0"
+    }
+}
