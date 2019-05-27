@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Consulta del tiempo</title>
+<link href="tienda.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#formdatos").submit(function(event) {
+		// Detenemos el envío del formulario				
+		event.preventDefault();
+		// Recoger datos del formulario
+		var latitud = $("#latitud").val(),
+		longitud = $("#longitud").val(),		
+		// Inicializar un registro con los datos de formulario para enviar por AJAX
+		datos = {"latitud":latitud, "longitud":longitud};
+		
+		// Lanzar petición AJAX
+		$.ajax({
+			url: "validar.php",
+			type: "POST",
+			dataType: 'json',
+			data: datos
+		}).done(function(respuesta){
+			// Si no hay error
+			if (respuesta.estado) { 
+                            $("#formdatos").unbind('submit').submit();
+			}
+			else {
+				var span = '<span style="color:red">';				
+				$.each( respuesta.error, function( key,value ) {					
+					span+='<br />'+value;
+  				})
+  				span+='</span>';
+				$("#respuesta").html(span);
+			}
+		});
+	});
+});
+</script>
+</head>
+<body>
+    <div id='login'>
+    <form id="formdatos" action='busqueda.php' method='post'>
+    <fieldset>
+        <legend>Consulta del tiempo</legend>        
+        <div class='campo'>
+            <label for='latitud'>Latitud:</label><br/>
+            <input type='text' name='latitud' id='latitud' /><br/>
+        </div>  
+        <div class='campo'>
+            <label for='longitud' >Longitud</label><br/>
+            <input type='text' name='longitud' id='longitud' /><br/>
+        </div>
+        <div class='campo'>
+            <input type='submit' name='Consultar' value='Consultar' />
+        </div>        
+    </fieldset>
+    </form>
+    </div>
+    <div id="respuesta"></div>
+</body>
+</html>
